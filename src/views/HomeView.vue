@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import ReplaceIp from '../components/ReplaceIp.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+    <ReplaceIp />
 </template>
