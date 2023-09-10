@@ -21,7 +21,7 @@ const lookupIpAddresses = async () => {
     }
   }
 
-  ipInfoList.value = infoList
+  ipInfoList.value = infoList as any[];
 }
 </script>
 <template>
