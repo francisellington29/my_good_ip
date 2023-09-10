@@ -3,5 +3,5 @@ import ReplaceIp from '../components/ReplaceIp.vue'
 </script>
 
 <template>
-    <ReplaceIp />
+  <ReplaceIp />
 </template>
