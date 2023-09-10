@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import axios from 'axios'
 
 const ipAddresses = ref('')
+
 const ipInfoList = ref([])
 
 const lookupIpAddresses = async () => {
@@ -12,16 +13,19 @@ const lookupIpAddresses = async () => {
     .map((ip) => ip.trim())
 
   const infoList = []
+
   for (const ip of ips) {
     try {
       const response = await axios.get(`https://ipinfo.io/${ip}/json`)
+
       infoList.push(response.data)
     } catch (error) {
       console.error(`查询IP地址 ${ip} 失败`, error)
     }
   }
 
-  ipInfoList.value = infoList as any[];
+  // 使用类型断言
+  ipInfoList.value = infoList
 }
 </script>
 <template>
