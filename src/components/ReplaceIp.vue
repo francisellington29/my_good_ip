@@ -71,12 +71,15 @@ const copyToClipboard = (text: string) => {
   gap: 10px;
   padding: 20px;
 }
-
+input {
+  border: 1px solid #ccc;
+}
 textarea {
   width: 600px;
-  height: 500px;
+  height: 200px;
   padding: 10px;
   resize: vertical;
+  border: 1px solid #ccc;
 }
 
 button {
